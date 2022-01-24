@@ -1,11 +1,38 @@
-p,h1,h2,h3,h4,h5,h6,button{
-  font-family: Inter;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+    font-family: Inter;
 }
-button{
-  cursor: pointer;
+
+button {
+    cursor: pointer;
 }
-.layout{
-  display: flex;
-  flex-direction: row;
-  
+
+.layout {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 10px;
+}
+
+ul li ul {
+    padding-left: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
