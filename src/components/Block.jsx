@@ -37,8 +37,9 @@ const Block = ({ block, onSave, onDelete }) => {
   return (
     <div>
       {blockForRender}
-      <button onClick={() => onDelete(block.id)}>удалить</button>
-      {!editing && <button onClick={() => setEditing(true)}>изменить</button>}
+      
+      <button className="functional-btn" onClick={() => onDelete(block.id)}>удалить</button>
+      {!editing && <button className="functional-btn" onClick={() => setEditing(true)}>изменить</button>}
     </div>
   );
 };

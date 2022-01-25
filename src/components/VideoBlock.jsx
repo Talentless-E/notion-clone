@@ -6,13 +6,13 @@ const VideoBlock = ({ url, onSave, editing }) => {
   if (url === null || editing) {
     return (
       <div>
-        <input ref={ref} placeholder={'Введите URL YouTube Video'} />
-        <button onClick={() => onSave(ref.current.value)}>Сохранить</button>
+        <input className="custom-input" ref={ref} placeholder={'Введите URL YouTube Video'} />
+        <button className="functional-btn" onClick={() => onSave(ref.current.value)}>Сохранить</button>
       </div>
     );
   }
 
-  return <iframe width='640' height='360' src={`https://www.youtube.com/embed/${url}`} frameBorder='0' />;
+  return <iframe title="Title" width='640' height='360' src={`https://www.youtube.com/embed/${url}`} frameBorder='0' />;
 };
 
 export default VideoBlock;

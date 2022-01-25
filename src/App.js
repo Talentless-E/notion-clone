@@ -22,8 +22,9 @@ function App() {
       title: 'New note',
       parentId: '-1',
       blocks: [],
+      children: [],
     };
-
+    
     dispatch(addNote(newNote));
   };
 

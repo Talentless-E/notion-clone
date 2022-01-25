@@ -42,6 +42,7 @@ const Main = ({ activeNote, onUpdateNote, setActiveNote, notes }) => {
     <div className='main'>
       <div className='main-container'>
         <select
+        className="main-select"
           value={activeNote.parentId}
           onChange={(e) => onEditParent(e.target.value)}
         >
@@ -60,15 +61,17 @@ const Main = ({ activeNote, onUpdateNote, setActiveNote, notes }) => {
           onChange={(e) => onEditField('title', e.target.value)}
           placeholder='enter title'
         />
+        <div className="line"></div>
         {activeNote.blocks.map((block) => (
           <Block key={block.id} block={block} onSave={saveBlock} onDelete={deleteBlock} />
         ))}
-        <div>
-          <button onClick={() => addBlock('TEXT')}>Текст</button>
-          <button onClick={() => addBlock('IMAGE')}>Картинка</button>
-          <button onClick={() => addBlock('VIDEO')}>Видео</button>
+        <div className="line"></div>
+        <div className="center">
+          <button className="functional-btn" onClick={() => addBlock('TEXT')}>Текст</button>
+          <button className="functional-btn" onClick={() => addBlock('IMAGE')}>Картинка</button>
+          <button className="functional-btn" onClick={() => addBlock('VIDEO')}>Видео</button>
         </div>
-        <button onClick={() => onUpdateNote(activeNote)}>Сохранить</button>
+        <button className="functional-btn center" onClick={() => onUpdateNote(activeNote)}>Сохранить заметку</button>
       </div>
     </div>
   );

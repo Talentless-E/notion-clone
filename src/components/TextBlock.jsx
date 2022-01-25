@@ -8,7 +8,7 @@ const TextBlock = ({ text, onSave, editing }) => {
     return (
       <div>
         <TextEditor onChange={(value) => setValue(value)} />
-        <button onClick={() => onSave(value)}>Сохранить</button>
+        <button className="functional-btn" onClick={() => onSave(value)}>Сохранить изменения</button>
       </div>
     );
   }
